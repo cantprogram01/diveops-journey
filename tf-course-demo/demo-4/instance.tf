@@ -12,7 +12,6 @@ output "ip" {
 
 resource "aws_s3_bucket" "tf-state-bucket"{
   bucket = "tf-state"
-  acl = "private"
 }
 
 # terraform {
