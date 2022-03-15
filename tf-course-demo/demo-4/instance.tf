@@ -10,3 +10,15 @@ output "ip" {
   value = aws_instance.example.public_ip
 }
 
+resource "aws_s3_bucket" "tf-state-bucket"{
+  bucket = "tf-state"
+  acl = "private"
+}
+
+# terraform {
+#   backend "s3" {
+#     bucket = "tf-state"
+#     key    = "path/tf-state/"
+#     region = "us-east-1"
+#   }
+# }
