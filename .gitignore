@@ -7,6 +7,8 @@
 *.tfvars
 *.terraform.lock.hcl
 *.exe
+*.pub
+mykey
 # Crash log files
 crash.log
 
