@@ -10,6 +10,7 @@ resource "aws_instance" "sample" {
 
     #the public SSH key
     key_name = "${aws_key_pair.mykey.key_name}"
+    depends_on = [aws_internet_gateway.main-gw] #this will prevent the error when trying to destroy the gateway due to depency
 
     #expand disk capacity
     root_block_device {
@@ -33,4 +34,6 @@ resource "aws_volume_attachment" "ebs-volume-1-attachment" {
     device_name = "/dev/xvdh"
     volume_id = "${aws_ebs_volume.ebs-volume-1.id}"
     instance_id = "${aws_instance.sample.id}"
+    stop_instance_before_detaching = true #this will stop the instance first before detaching the additional volume
+    
 }
