@@ -12,3 +12,7 @@ variable "AWS_ZONE" {
     "east1c" = "us-east-1c"
   }
 }
+
+variable "INSTANCE_DEVICE_NAME" {
+  default = "/dev/xvdh"
+}

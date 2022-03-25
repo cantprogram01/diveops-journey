@@ -13,11 +13,12 @@ resource "aws_instance" "sample" {
     depends_on = [aws_internet_gateway.main-gw] #this will prevent the error when trying to destroy the gateway due to depency
 
     #expand disk capacity
-    root_block_device {
-      volume_size = 16
-      volume_type = "gp2"
-      delete_on_termination = true #if true the instance is terminated, so is the disk
-    }
+    # root_block_device {
+    #   volume_size = 16
+    #   volume_type = "gp2"
+    #   delete_on_termination = true #if true the instance is terminated, so is the disk
+    # }
+    user_data = "${data.template_cloudinit_config.cloudinit-example.rendered}"
 }
 
 resource "aws_ebs_volume" "ebs-volume-1"{
@@ -31,7 +32,7 @@ resource "aws_ebs_volume" "ebs-volume-1"{
 }
 
 resource "aws_volume_attachment" "ebs-volume-1-attachment" {
-    device_name = "/dev/xvdh"
+    device_name = "${var.INSTANCE_DEVICE_NAME}"
     volume_id = "${aws_ebs_volume.ebs-volume-1.id}"
     instance_id = "${aws_instance.sample.id}"
     stop_instance_before_detaching = true #this will stop the instance first before detaching the additional volume
