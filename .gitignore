@@ -9,6 +9,7 @@
 *.exe
 *.pub
 mykey
+myrsa
 # Crash log files
 crash.log
 

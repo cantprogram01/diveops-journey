@@ -1,5 +1,5 @@
-resource "aws_key_pair" "mykey" {
-    key_name = "mykey"
-    public_key = "${file("mykey.pub")}"
+resource "aws_key_pair" "myrsa" {
+    key_name = "myrsa"
+    public_key = "${file("myrsa.pub")}"
   
 }
