@@ -2,32 +2,32 @@ terraform {
   required_providers {
 	aws = {
 	  source = "aws"
-	  version = "~> 3.23.0"
+	  version = ">= 0.12"
 	}
 
 	random = {
 	  source = "random"
-	  version = "~> 3.0.0"
+	  version = ">= 0.12"
 	}
 
 	local = {
 	  source = "local"
-	  version = "~> 2.0.0"
+	  version = ">= 0.12"
 	}
 
 	null = {
 	  source = "null"
-	  version = "~> 3.0.0"
+	  version = ">= 0.12"
 	}
 
 	template = {
 	  source = "template"
-	  version = "~> 2.2.0"
+	  version = ">= 0.12"
 	}
 
 	tls = {
 	  source = "tls"
-	  version = "~> 3.0.0"
+	  version = ">= 0.12"
 	}
 
   }

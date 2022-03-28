@@ -1,18 +1,27 @@
 resource "aws_iam_user" "test" {
-    # name = "test"
-    # force_destroy = true
-  
+    name      = "test"
+    path      = "/"
+    force_destroy = true
 }
+
+# resource "null_resource" "remove-group" {
+#   depends_on  = [aws_iam_group.grptest]
+#   provisioner "local-exec" {
+#     when    = "destroy"
+#     command = "aws iam detach-group-policy --group-name grptest --policy-arn arn:aws:iam::aws:policy/AdministratorAccess"
+#   }
+# }
+
 resource "aws_iam_group" "grptest" {
-    # name = "grptest"
-  
+    name      = "grptest"
+    path      = "/"
 }
-resource "aws_iam_policy_attachment" "AdministratorAccess" {
-    # name = "AdministratorAccess"
-    # groups = ["${aws_iam_group.grptest.name}"]
-    # policy_arn = "arn:aws:iam::aws:policy/AdministratorAccess"
+# resource "aws_iam_policy_attachment" "AdministratorAccess" {
+#     # name = "AdministratorAccess"
+#     # groups = ["${aws_iam_group.grptest.name}"]
+#     # policy_arn = "arn:aws:iam::aws:policy/AdministratorAccess"
   
-}
+# }
 
 # resource "aws_iam_user" "vincent" {
 #     name = "vincent"
