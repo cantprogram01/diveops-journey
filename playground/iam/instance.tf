@@ -11,7 +11,8 @@ resource "aws_instance" "sample" {
     #the public SSH key
     key_name = "${aws_key_pair.myrsa.key_name}"
     depends_on = [aws_internet_gateway.main-gw] #this will prevent the error when trying to destroy the gateway due to dependency
-
+    #role:
+    iam_instance_profile = aws_iam_instance_profile.s3-instance-profile.name
 
 }
 
