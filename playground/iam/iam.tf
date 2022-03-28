@@ -1,3 +1,4 @@
+#this will configure a secure way to access buckets, curl http://169.254.169.254/latest/meta-data/iam/security-credentials/[name of role]
 resource "aws_iam_role" "s3-role" {
     name = "s3-role"
     assume_role_policy = jsonencode(
@@ -16,6 +17,7 @@ resource "aws_iam_role" "s3-role" {
     })
 }
 
+#this will configure the role policy the will be used in the instance, give access from the instance going to the bucket itself
 resource "aws_iam_role_policy" "s3-bucket-role" {
     name = "s3-bucket-role"
     role = "${aws_iam_role.s3-role.id}"
@@ -29,8 +31,8 @@ resource "aws_iam_role_policy" "s3-bucket-role" {
                     "s3:*"
                 ],
                 "Resource":[
-                    "arn:aws:s3:::s3-bucket-win64",
-                    "arn:aws:s3:::s3-bucket-win64/*"
+                    "arn:aws:s3:::mybucket-win64",
+                    "arn:aws:s3:::mybucket-win64/*"
                 ]
             }
         ]
