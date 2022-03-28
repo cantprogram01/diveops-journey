@@ -23,7 +23,7 @@ resource "aws_launch_configuration" "launch-config" {
   instance_type   = "t2.micro"
   key_name        = aws_key_pair.myrsa.key_name
   security_groups = ["${aws_security_group.allow-ssh.id}"]
-
+  depends_on = [aws_internet_gateway.main-gw]
 }
 
 
