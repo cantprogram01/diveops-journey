@@ -6,7 +6,7 @@ resource "aws_eip" "nat" {
 # resource "aws_eip" "test-eip" {
 #     instance = aws_instance.sample.id
 #     vpc = true
-  
+
 # }
 
 resource "aws_nat_gateway" "nat-gw" {
