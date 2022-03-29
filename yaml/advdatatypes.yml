@@ -63,6 +63,19 @@ family: !!omap
  - son:
     name: elijah
     age: 1
+#reusing the same properties using anchors
+---
+likes: &fruit #assign a variable using & for anchor
+  favfruit: banana
+  dislikes: mango
+person1: 
+  name: elijah
+  <<: *fruit #attaching the variable usingg <<: *variable (*=all of it)
+person2:
+  name: mj
+  <<: *fruit 
+  dislikes: apple #you can override anchors after you attach it on an empty field
+
 
 #!!set will allow you to have unique values
 ---

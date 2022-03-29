@@ -1,0 +1,24 @@
+{
+    "Schoo": [
+        {
+            "School": "Universidad De Dagupan",
+            "Location": "Dagupan City",
+            "Region": 1,
+            "Course": [
+                {
+                    "BSIT": [
+                        {
+                            "Student": [
+                                {
+                                    "Name": "Arwin",
+                                    "Subject": "OOP",
+                                    "Age": 69
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
