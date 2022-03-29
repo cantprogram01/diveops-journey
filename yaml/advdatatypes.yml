@@ -49,6 +49,21 @@ pair1: !!pairs
 #same as, an array of hashtables
 ---
 pair1: !!pairs [job: sysadmin, job: student]
+
+
+#dictionary !!omap
+---
+family: !!omap
+ - father:
+    name: arwin
+    age: 69
+ - mother:
+    name: mj
+    age: 69
+ - son:
+    name: elijah
+    age: 1
+
 #!!set will allow you to have unique values
 ---
 unique: !!set
