@@ -1,0 +1,58 @@
+#!!seq sequence
+---
+student: !!seq
+ - name
+ - age
+ - gender
+ - id
+# sequence is same as this
+---
+cities: [las pinas, pasay]
+
+# sarse seq, means some seq entries is empty
+---
+sparse seq:
+  - the big
+  - brown fox
+  -
+  - null
+  - ~
+  - jumps over
+  - the lazy dog
+#nested sequence
+---
+- 
+ - arwin
+  - vincent
+    - custodio
+ - elijah
+ - benjamin
+ - custodio
+
+#nested mappings: map within a map
+---
+name: arwin
+role:
+  job: sysadmin
+  age: 69
+
+#same as
+---
+student: {name: "elijah", age: "2", job: "baby"}
+
+#!!pairs: keys may haev duplicate values
+---
+pair1: !!pairs
+ - job: sysadmin
+ - job: student
+
+#same as, an array of hashtables
+---
+pair1: !!pairs [job: sysadmin, job: student]
+#!!set will allow you to have unique values
+---
+unique: !!set
+ ? elijah
+ ? arwin
+ ? benjamin
+ 

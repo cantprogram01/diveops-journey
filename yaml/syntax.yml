@@ -1,0 +1,29 @@
+#YAML is Case Sensitive
+#space and identation is importante in YAML
+#Key:Value Pair
+---
+"apple" : "The fruit is red"
+1 : "Arwin's roll number.."
+
+#lists
+---
+- apple #and Apple is not the same
+- mango
+- banana
+- Apple
+
+#dictionary
+---
+cities:
+  - las pinas
+  - alabang
+  - pasay
+
+#abbreviated format for list
+---
+cities: ["las pinas","alabang","pasay"]
+
+#abbreviated format for dictionary
+---
+student: {name: "elijah", age: "2", gender: "male"}
+...

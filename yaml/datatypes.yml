@@ -1,0 +1,58 @@
+#String
+name: "elijah"
+gender: male
+
+# | pipe is printing text files including the linebreaks
+--- 
+summary1: | 
+  the big brown fox
+  jumps over the lazy
+  dog
+
+# > formating to a single line without the linebreaks
+---
+summary2: >
+  the big brown
+  fox jumps over
+  the lazy dog
+# > is same as below
+summary3: "the big brown fox jumps over the lazy dog"
+---
+#integer
+age: 2
+
+#float / decimal
+grade: 95.5
+
+#boolean (true or false)
+---
+booleanValue1: No # n, N, no, false, False, FALSE
+booleanValue2: Yes # y, Y, yes, true, True, TRUE
+
+#specify own datatypes [key: !!type value]
+---
+zero: !!int 0
+positiveNum: !!int 1
+negativeNum: !!int -1
+binaryNum: 01b001
+octal: !!int 06574
+hexa: !!int 0x45
+commaValue: +69_000
+exponents: 6.023E56
+
+#floating point numbers
+marks: !!float 69.69
+infinite: !!float .inf
+notANumber: .nan
+
+#null
+surname: !!null Null # or null, NULL or ~
+~: #this is null value
+
+#date and time
+
+canonical: 2022-3-30T01:49:00.1Z
+valid iso8601: 2022-3-30t01:49:00.10-05:00
+space separated: 2022-3-30 01:49:00 -5  #with timezone -(time diff)
+no timezone (z): 2022-3-30 01:51:00.10 #best sofar for me
+date: 3/30/22 22:00:00
