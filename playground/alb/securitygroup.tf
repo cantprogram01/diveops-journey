@@ -19,7 +19,7 @@ resource "aws_security_group" "allow-ssh" {
     from_port   = 80
     to_port     = 80
     protocol    = "tcp"
-    security_groups = [aws_security_group.allow-elb-ports.id]
+    security_groups = [aws_security_group.allow-alb-ports.id]
   }
   tags = {
     Name = "allow-ssh"
@@ -27,9 +27,9 @@ resource "aws_security_group" "allow-ssh" {
 
 }
 
-resource "aws_security_group" "allow-elb-ports" {
+resource "aws_security_group" "allow-alb-ports" {
   vpc_id      = aws_vpc.main.id
-  name        = "allow-elb-ports"
+  name        = "allow-alb-ports"
   description = "security group to allow ports"
   egress {
     from_port   = 0

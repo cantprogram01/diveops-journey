@@ -6,6 +6,6 @@
 #   value = aws_db_instance.arwindb.endpoint
 # }
 
-output "ELB"{
-    value = aws_elb.my-elb.dns_name
-}
+# output "ELB"{
+#     value = aws_elb.my-elb.dns_name
+# }
