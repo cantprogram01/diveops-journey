@@ -15,12 +15,12 @@ resource "aws_security_group" "allow-ssh" {
     protocol    = "tcp"
     cidr_blocks = ["152.32.111.87/32"]
   }
-  ingress { #THIS WILL ALLOW THE LOAD BALANCER TO ACCESS PORT 80 TO THE INSTANCE!
-    from_port   = 80
-    to_port     = 80
-    protocol    = "tcp"
-    security_groups = [aws_security_group.allow-alb-ports.id]
-  }
+  # ingress { #THIS WILL ALLOW THE LOAD BALANCER TO ACCESS PORT 80 TO THE INSTANCE!
+  #   from_port   = 80
+  #   to_port     = 80
+  #   protocol    = "tcp"
+  #   security_groups = [aws_security_group.allow-alb-ports.id]
+  # }
   tags = {
     Name = "allow-ssh"
   }
