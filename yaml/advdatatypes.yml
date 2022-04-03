@@ -7,7 +7,7 @@ student: !!seq
  - id
 # sequence is same as this
 ---
-cities: [las pinas, pasay]
+cities: [aaa bbb, ccc]
 
 # sarse seq, means some seq entries is empty
 ---
@@ -22,46 +22,46 @@ sparse seq:
 #nested sequence
 ---
 - 
- - arwin
-  - vincent
-    - custodio
- - elijah
- - benjamin
- - custodio
+ - aaa
+  - bbb
+    - ccc
+ - ddd
+ - eee
+ - fff
 
 #nested mappings: map within a map
 ---
-name: arwin
+name: aaa
 role:
-  job: sysadmin
+  job: bbb
   age: 69
 
 #same as
 ---
-student: {name: "elijah", age: "2", job: "baby"}
+student: {name: "aaa", age: "2", job: "bbb"}
 
 #!!pairs: keys may haev duplicate values
 ---
 pair1: !!pairs
- - job: sysadmin
+ - job: aaa
  - job: student
 
 #same as, an array of hashtables
 ---
-pair1: !!pairs [job: sysadmin, job: student]
+pair1: !!pairs [job: aaa, job: student]
 
 
 #dictionary !!omap
 ---
 family: !!omap
  - father:
-    name: arwin
+    name: aaa
     age: 69
  - mother:
-    name: mj
+    name: bbb
     age: 69
  - son:
-    name: elijah
+    name: ccc
     age: 1
 #reusing the same properties using anchors
 ---
@@ -80,7 +80,7 @@ person2:
 #!!set will allow you to have unique values
 ---
 unique: !!set
- ? elijah
- ? arwin
- ? benjamin
+ ? aaa
+ ? bbb
+ ? ccc
  

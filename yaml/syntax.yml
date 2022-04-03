@@ -3,7 +3,7 @@
 #Key:Value Pair
 ---
 "apple" : "The fruit is red"
-1 : "Arwin's roll number.."
+1 : "aaa's roll number.."
 
 #lists
 ---
@@ -15,15 +15,15 @@
 #dictionary
 ---
 cities:
-  - las pinas
-  - alabang
-  - pasay
+  - aaa
+  - bbb
+  - ccc
 
 #abbreviated format for list
 ---
-cities: ["las pinas","alabang","pasay"]
+cities: [" pinas","aaa","bbb"]
 
 #abbreviated format for dictionary
 ---
-student: {name: "elijah", age: "2", gender: "male"}
+student: {name: "egg", age: "2", gender: "male"}
 ...

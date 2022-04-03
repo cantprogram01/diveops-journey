@@ -1,8 +1,8 @@
 {
     "Schoo": [
         {
-            "School": "Universidad De Dagupan",
-            "Location": "Dagupan City",
+            "School": "aaa aa aaa",
+            "Location": "bbb ccc",
             "Region": 1,
             "Course": [
                 {
@@ -10,8 +10,8 @@
                         {
                             "Student": [
                                 {
-                                    "Name": "Arwin",
-                                    "Subject": "OOP",
+                                    "Name": "aaa",
+                                    "Subject": "bbb",
                                     "Age": 69
                                 }
                             ]
