@@ -10,4 +10,5 @@ What It will do:
 2. Copy the webapps.dist files to webapps folder
 3. Copy both context.xml and tomcat-user.xml to tomcat folder
 4. Run catalina.sh to start tomcat services
-5. Automatically Enable Web Manager
+5. Copy war file to tomcat webapps directory for deployment
+6. Automatically Enable Web Manager
