@@ -1,0 +1,21 @@
+apiVersion: apps/v1 #if you are going to use Pod, only use v1 for deployment and replicaset use apps/v1
+kind: Deployment #can be ReplicaSet or Pod
+metadata:
+  name: frontend
+  labels:
+    app: mywebsite
+    tier: frontend
+spec:
+  replicas: 2
+  template:
+    metadata:
+      name: mywebsite
+      labels:
+        app: mywebsite
+    spec:
+      containers:
+        - name: nginx-container
+          image: nginx
+  selector:
+    matchLabels:
+      app: mywebsite
