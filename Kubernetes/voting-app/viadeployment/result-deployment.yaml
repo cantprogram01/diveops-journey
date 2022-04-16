@@ -1,23 +1,23 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
- name: voting-app
+ name: result-app
  labels:
-      app: voting-app
+      app: result-app
       type: demo-voting-app
 spec:
  template:
   metadata:
-    name: voting-app
+    name: result-app
     labels:
-      app: voting-app
+      app: result-app
       type: demo-voting-app
   spec:
     containers:
-      - name: voting-app
-        image: kodekloud/examplevotingapp_vote:v1
+      - name: result-app
+        image: kodekloud/examplevotingapp_result:v1
  replicas: 2
  selector:
     matchLabels:
-        app: voting-app
+        app: result-app
         type: demo-voting-app
