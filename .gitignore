@@ -9,6 +9,7 @@
 *.pub
 mykey
 myrsa
+.vscode
 # Crash log files
 crash.log
 
