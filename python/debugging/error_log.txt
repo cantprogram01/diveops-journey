@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "d:\Tutorial\tf-files\python\debugging\raise-assert.py", line 4, in <module>
+    raise Exception("This is a test error")
+Exception: This is a test error
